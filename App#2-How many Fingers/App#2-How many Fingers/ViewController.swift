@@ -10,8 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var enterNumber: UITextField!
+    @IBOutlet weak var label: UILabel!
+    
+    @IBAction func diceRoll(_ sender: Any) {
+    var diceroll=Int(arc4random_uniform(6))
+     var enteredDiceRoll=Int(enterNumber.text!)
+        if enteredDiceRoll==diceroll{
+            label.text="You're right"
+        }
+        else {
+            label.text="Incorrect, the correct answer is \(diceroll)"
+        }
+     
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text=""
         // Do any additional setup after loading the view, typically from a nib.
     }
 
