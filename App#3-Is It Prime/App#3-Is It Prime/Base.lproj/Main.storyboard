@@ -61,6 +61,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ul-nP-SxO">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
                                         <state key="normal" title="Is it Prime"/>
+                                        <connections>
+                                            <action selector="isitPrime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zbd-Bt-PUa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -83,6 +86,10 @@
                             <constraint firstItem="ZoU-NU-CMP" firstAttribute="top" secondItem="m6x-8G-bjY" secondAttribute="bottom" constant="54" id="zuu-Nb-NtR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberText" destination="ZoU-NU-CMP" id="bay-0B-nvo"/>
+                        <outlet property="primeLabel" destination="2Xi-Gv-6n9" id="Azg-dd-cWw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

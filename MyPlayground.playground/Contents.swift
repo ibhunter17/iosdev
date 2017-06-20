@@ -2,30 +2,26 @@
 
 import UIKit
 
-class Ghost {
-    var isAlive = true
-    var strengh = 20
-    func kill() {
-        isAlive = false
+
+
+var q = 68593
+var m=Int(sqrt(Double(q)))
+var isPrime = true
+while m >= 2 {
+    if (q%m==0){
+    isPrime=true
     }
-    func isStrong() ->  Bool {
-        if strengh > 10 {
-            return true
-        }
-        else {
-            return false
-        }
-        
+    else {
+        isPrime=false
+        m=1
     }
+ m=m-1
 }
 
-var ghost=Ghost()
+if (isPrime){
+    print("The number is prime")
+}
 
-print(ghost.strengh)
-print(ghost.isAlive)
-
-
-
-ghost.kill()
-print(ghost.isAlive)
-ghost.isStrong()
+else{
+    print("The number is not prime")
+}
