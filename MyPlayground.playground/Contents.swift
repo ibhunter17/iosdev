@@ -2,22 +2,30 @@
 
 import UIKit
 
-var username="nitish"
-var password="hi"
-
-if username=="nitish" && password=="hi" {
-    print("They are correct")
+class Ghost {
+    var isAlive = true
+    var strengh = 20
+    func kill() {
+        isAlive = false
+    }
+    func isStrong() ->  Bool {
+        if strengh > 10 {
+            return true
+        }
+        else {
+            return false
+        }
+        
+    }
 }
 
-else if username=="nitish" && password != "hi" {
-   print("Password is not correct")
-}
-else if username != "nitish" && password=="hi" {
-    print("Username is not correct")
-    
-}
-else  {
-    print("Both are incorrect")
-}
+var ghost=Ghost()
 
-let diceRoll = arc4random_uniform(10)
+print(ghost.strengh)
+print(ghost.isAlive)
+
+
+
+ghost.kill()
+print(ghost.isAlive)
+ghost.isStrong()
